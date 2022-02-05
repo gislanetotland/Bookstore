@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href=" {% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flink - bookstore</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+          <span class="logo">Bookstore Flink</span>
+        </div>
+      </nav>
+    <h1>Available books</h1>
+    <section class="books">
+       
+        {% for book in book_list %}
+            <section class='product'> 
+                <article class="details">            
+                    <article class ='picture' >
+                        <img src=" {{book.image_url.url}}" alt="picture of the book" width="250" height="300">
+                    </article>
+                    <article class='title'>
+                        {{book.title}}  
+                    </article>
+                   
+                    <article class = 'description'>
+                        {{book.description}}
+                    </article>
+                    <article class="price">
+                        Price: {{book.price|floatformat:0}}kr
+                    </article>
+                    <article class="buy">
+                        <button class="button">buy now</button>
+                    </article> 
+                </article>
+            </section>     
+
+        {%endfor%}
+
+    </section>
+
+    <footer class="foot">
+        <p>
+          &copy Designed by Gislane Totland  
+        </p>
+    </footer>
+
+</body>
+</html>
