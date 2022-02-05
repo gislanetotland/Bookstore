@@ -1,5 +1,5 @@
 # Bookstore
-A simple bookstore using Django
+A simple bookstore webpage using Django
 
 
 In this assignment you must develop a Web application for a bookstore using Django framework. You must do the following:
